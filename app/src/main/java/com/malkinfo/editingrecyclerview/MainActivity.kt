@@ -20,17 +20,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        /**set List*/
+
         userList = ArrayList()
-        /**set find Id*/
+
         addsBtn = findViewById(R.id.addingBtn)
         recv = findViewById(R.id.mRecycler)
-        /**set Adapter*/
+
         userAdapter = UserAdapter(this,userList)
-        /**setRecycler view Adapter*/
+
         recv.layoutManager = LinearLayoutManager(this)
         recv.adapter = userAdapter
-        /**set Dialog*/
+
         addsBtn.setOnClickListener { addInfo() }
 
     }
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     private fun addInfo() {
         val inflter = LayoutInflater.from(this)
         val v = inflter.inflate(R.layout.add_item,null)
-        /**set view*/
+
         val userName = v.findViewById<EditText>(R.id.userName)
         val userNo = v.findViewById<EditText>(R.id.userNo)
 
@@ -63,6 +63,6 @@ class MainActivity : AppCompatActivity() {
         addDialog.create()
         addDialog.show()
     }
-    /**ok now run this */
+
 
 }

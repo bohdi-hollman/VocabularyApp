@@ -62,7 +62,6 @@ class UserAdapter(val c:Context,val userList:ArrayList<UserData>):RecyclerView.A
                       /**set delete*/
                       AlertDialog.Builder(c)
                               .setTitle("Delete")
-                              .setIcon(R.drawable.ic_warning)
                               .setMessage("Are you sure delete this entry?")
                               .setPositiveButton("Yes"){
                                   dialog,_->
