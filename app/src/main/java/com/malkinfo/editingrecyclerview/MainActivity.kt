@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             val number = userNo.text.toString()
             userList.add(UserData("Vocab Word: $names","Definition : $number"))
             userAdapter.notifyDataSetChanged()
-            Toast.makeText(this,"Welcome to the Club!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Welcome to the club!",Toast.LENGTH_SHORT).show()
             dialog.dismiss()
         }
         addDialog.setNegativeButton("Cancel"){
