@@ -14,7 +14,7 @@ import com.malkinfo.editingrecyclerview.view.UserAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var addsBtn:FloatingActionButton
-    private lateinit var recv:RecyclerView
+    private lateinit var recview:RecyclerView
     private lateinit var userList:ArrayList<UserData>
     private lateinit var userAdapter:UserAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,12 +24,12 @@ class MainActivity : AppCompatActivity() {
         userList = ArrayList()
 
         addsBtn = findViewById(R.id.addingBtn)
-        recv = findViewById(R.id.mRecycler)
+        recview = findViewById(R.id.mRecycler)
 
         userAdapter = UserAdapter(this,userList)
 
-        recv.layoutManager = LinearLayoutManager(this)
-        recv.adapter = userAdapter
+        recview.layoutManager = LinearLayoutManager(this)
+        recview.adapter = userAdapter
 
         addsBtn.setOnClickListener { addInfo() }
 
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             val number = userNo.text.toString()
             userList.add(UserData("Vocab Word: $names","Definition : $number"))
             userAdapter.notifyDataSetChanged()
-            Toast.makeText(this,"Vocab Entry Added!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Welcome to the Club!",Toast.LENGTH_SHORT).show()
             dialog.dismiss()
         }
         addDialog.setNegativeButton("Cancel"){

@@ -59,7 +59,6 @@ class UserAdapter(val c:Context,val userList:ArrayList<UserData>):RecyclerView.A
                       true
                   }
                   R.id.delete->{
-                      /**set delete*/
                       AlertDialog.Builder(c)
                               .setTitle("Delete")
                               .setMessage("Are you sure delete this entry?")
@@ -67,7 +66,7 @@ class UserAdapter(val c:Context,val userList:ArrayList<UserData>):RecyclerView.A
                                   dialog,_->
                                   userList.removeAt(adapterPosition)
                                   notifyDataSetChanged()
-                                  Toast.makeText(c,"Entry is Deleted",Toast.LENGTH_SHORT).show()
+                                  Toast.makeText(c,"Bye bye!",Toast.LENGTH_SHORT).show()
                                   dialog.dismiss()
                               }
                               .setNegativeButton("No"){
